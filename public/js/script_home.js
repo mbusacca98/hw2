@@ -109,7 +109,7 @@ function registerSalone(event){
     if(1){
         async function postData(){
             document.querySelector('#registerUser .submit').value = "Registrazione in corso..."
-            const url = "php/registerSalone.php";
+            const url = "registerSalone";
             let formData = new FormData(form);
             var div = document.querySelectorAll('#registerUser input');
             div.forEach(element => {
@@ -129,6 +129,9 @@ function registerSalone(event){
                 formData.append(element.name, element.value);
             });
             var response = await fetch(url, {
+                headers: {
+                    "X-CSRF-Token": document.querySelector('meta[name="_token"]').dataset.token
+                },
                 method: "POST",
                 body: formData,
             });

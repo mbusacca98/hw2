@@ -30,15 +30,6 @@
                     <div>
                         <a href="#">Home</a>
                     </div>
-                    <div>
-                        <a href="#">Prezzi</a>
-                    </div>
-                    <div>
-                        <a href="#">Servizi</a>
-                    </div>
-                    <div>
-                        <a href="#">Contatti</a>
-                    </div>
                     <div class="@if($logged == true) {{'hidden'}} @else {{''}} @endif" id="login_button">
                         <a href="#">Login</a>
                     </div>

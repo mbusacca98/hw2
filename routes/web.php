@@ -17,7 +17,8 @@ use Illuminate\Support\Facades\Hash;
 //Home
 Route::get('/', 'homeController@home');
 Route::post('loginUser', 'homeController@login');
-Route::post('registerUser', 'homeController@register');
+Route::post('registerUser', 'homeController@registerUser');
+Route::post('registerSalone', 'homeController@registerSalone');
 Route::get('check_email/{typeUser}/{email}', 'RegController@check_email');
 Route::get('check_cf/{typeUser}/{CF}', 'RegController@check_cf');
 Route::get('logout', 'homeController@logout');
